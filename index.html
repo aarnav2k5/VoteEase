@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoteQR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="welcomeScreen" class="screen">
+      <h1>Welcome to VoteEase</h1>
+      <button onclick="scanQRCode()">Scan to Begin Voting</button>
+    </div>
+
+    <div id="votingScreen" class="screen hidden">
+      <h2>Select Your Candidate</h2>
+      <form id="voteForm">
+        <label
+          ><input type="radio" name="candidate" value="Candidate A" /> Candidate
+          A</label
+        ><br />
+        <label
+          ><input type="radio" name="candidate" value="Candidate B" /> Candidate
+          B</label
+        ><br />
+        <label
+          ><input type="radio" name="candidate" value="Candidate C" /> Candidate
+          C</label
+        ><br />
+        <button type="button" onclick="submitVote()">Submit Vote</button>
+      </form>
+    </div>
+
+    <div id="confirmationScreen" class="screen hidden">
+      <h2>Thank You for Voting!</h2>
+      <p>Your vote has been securely submitted.</p>
+      <button onclick="returnToHome()">Finish</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
